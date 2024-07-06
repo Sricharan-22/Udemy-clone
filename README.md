@@ -13,7 +13,7 @@ This project is a clone of the popular online learning platform Udemy, implement
    CSS3
    
 ## Usage
-   Clone the repository: git clone https://github.com/Sricharan-22/Udemy-Clone
+   Clone the repository: git clone https://github.com/Sricharan-22/Udemy-clone
    Open index.html in your browser.
    
 ## Contributing
