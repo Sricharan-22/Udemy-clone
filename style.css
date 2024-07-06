@@ -1,0 +1,211 @@
+*{
+    margin:0px;
+    padding:0px;
+  }
+  body{
+        font-family: "Gabarito", sans-serif;
+        font-optical-sizing: auto;
+  }
+  .taskbar{
+      display:flex;
+      justify-content: space-between;
+      padding:10px;
+      border-bottom: solid black 1px;
+      gap:10px;
+      align-items: center;
+      position: sticky;
+      top:0px;
+      background-color: white;
+      z-index: 1;
+  }
+  .taskbar__title h1{
+      color:#A435F0;
+  }
+  .taskbar__search{
+      padding:10px;
+      border: solid black 1px;
+      width:70%;
+      border-radius: 20px;
+      display:flex;
+      gap:10px;
+      align-items: center;
+  }
+  .taskbar__search input{
+      border:0px;
+      width:100%;
+      background-color: transparent;
+  }
+  .taskbar__search input:focus{
+      outline: none;
+  }
+  .taskbar__option{
+      display:flex;
+      gap:20px;
+      align-items: center;
+      padding-right:30px;
+  }
+  .mylearning{
+    position:relative;
+    cursor:pointer;
+  }
+  .mylearning__popup{
+      position:absolute;
+      background-color: white;
+      border:solid black 1px;
+      border-radius: 10px;
+      width:100px;
+      top:30px;
+      padding:10px;
+      right:0px;
+      display: none;
+  }
+  .mylearning:hover .mylearning__popup{
+    display:block;
+  }
+  .menubar{
+    display: none;
+  }
+  
+  .categories{ 
+      display:flex;
+      justify-content: space-around;
+      padding:10px;
+      border-bottom: solid black 1px;
+  }
+  .categories p{
+      background-color:#A435F0;
+      color:white;
+      border-radius:30px;
+      padding:7px;
+      border: solid #D1AB4F 1px;
+
+  }
+  .categories p:hover{
+      background-color: white;
+      color:#A435F0;
+      border: solid #D1AB4F 1px;
+      cursor: pointer;
+  }
+  .sale__image{
+    position: relative;
+  }
+  .sale__image img{
+    width:100%;
+  }
+  .sale_image_offer{
+    background-color: #D3C196;
+    width:300px;
+    height:100px;
+    position: absolute;
+    top:120px;
+    left:200px;
+    padding:20px;
+    border:solid #D1AB4F 2px;
+    border-radius: 20px;
+    animation-name: offer_display;
+    animation-duration: 2s;
+    opacity:0;
+    animation-fill-mode: forwards;
+  }
+  @keyframes offer_display {
+    0%{
+        opacity: 0;
+        transform: scale(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+  }
+  .courses{
+    padding:10px;
+}
+.courses__sections img{
+    width:100%;
+}
+.courses__sections{
+    margin-top: 5px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+}
+.course__card{
+    width:20%;
+}
+.topics{
+    padding:10px;
+}
+.topics__recommended{
+    padding:10px;
+    display:flex;
+    flex-wrap: wrap;
+    gap:10px;
+}
+.topics__recommended p{
+    border: solid grey 1px;
+    padding:10px;
+    flex-grow:1;
+    flex-basis: 25%;
+}
+.courses_c2{
+    padding:10px;
+}
+.courses__sections_c2 img{
+    width:100%;
+}
+.courses__sections_c2{
+    margin-top: 5px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    gap:10px;
+}
+.course__card_c2{
+    width:20%;
+}
+.footer{
+    background-color: black;
+    color:white;
+    padding:30px;
+    width:96%;
+}
+.footer_sub{
+    display:flex;
+    gap:40px;
+    margin:10px;
+}
+.footer_sub p{
+    margin:20px;
+}
+.footer_main{
+    margin:25px;
+    display:flex;
+    justify-content: space-between;
+}
+@media screen and (max-width:1200px){
+    .sale_image_offer{
+        display:none;
+    }
+}
+@media screen and (max-width:800px){
+    body{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width:600px){
+    .course__card{
+        flex-basis: 40%;
+    }
+    .course__card_c2{
+        flex-basis: 40%;
+    }
+    .categories{
+     display:none;
+    }
+    .taskbar__option , .taskbar__search{
+        display:none;
+    }
+    .menubar{
+        display:block;
+    }
+}
